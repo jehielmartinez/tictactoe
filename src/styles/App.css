@@ -1,21 +1,38 @@
+:root {
+  --dimension: 150px;
+  --background: darkcyan;
+  --borderColor: black;
+  --borderWidth: 5px;
+  --border: 7px solid black
+}
 .main-container{
   display: flex;
-  background-color: darkcyan;
+  background-color: var(--background);
   height: 100vh;
-  color: aqua;
+  justify-content: center;
+  align-items: center;
 }
-td {
+
+.container{
+
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  background-color: cadetblue;
+}
+.element {
+  display: flex;
   width: 100px;
   height: 100px;
+  border: 2px solid black;
+  background-color: aquamarine;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
 }
-table {
-  margin: 5px auto;
-}
-.vertical {
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-}
-.horizontal {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+button {
+  background-color: green;
 }
