@@ -63,10 +63,11 @@ function App () {
   }
 
   return (
-    <div className='main-container'>
-      <div className='board'>
+    <div data-testid='main-container' className='main-container'>
+      <div data-testid='board' className='board'>
         {arr.map((value, index) => (
           <Element
+            data-testid='element'
             key={index}
             handleClick={() => humanPlay(index)}
             value={value}
