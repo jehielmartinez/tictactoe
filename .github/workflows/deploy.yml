@@ -1,0 +1,19 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install npm dependencies
+        run: |
+          npm install
+      - name: Run Tests
+        run: |
+          npm run test
+      - name: Deploy
+        run: |
+          npm run deploy
