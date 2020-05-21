@@ -14,7 +14,11 @@ jobs:
       - name: Run Tests
         run: |
           npm run test
-      - name: Deploy
+      - name: Build
         run: |
-          git config user.name "jehielmartinez" && git config user.email "jehielmartinez@gmail.com"
-          npm run deploy
+          npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
