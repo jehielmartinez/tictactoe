@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^5.0.0",
     "standard": "^14.3.3"
   }
 }
